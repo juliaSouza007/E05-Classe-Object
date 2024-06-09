@@ -46,6 +46,29 @@ public class Conta {
         }
     }
 
+     public String toString() {
+        String str = "<< Conta " + this.numero + " >>\n" +
+                      this.dono.toString() + "\n" +
+                     "Saldo: " + this.saldo + "\n" +
+                     "Limite: " + this.limite + "\n" +
+                     "\n";
+        return str;
+    }
+
+    public boolean equals(Object obj) {
+        if(obj instanceof Conta) {
+            Conta objConta = (Conta) obj;
+
+            if(this.numero == objConta.numero) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
     //getters
     public double getSaldo() {
         return saldo;
