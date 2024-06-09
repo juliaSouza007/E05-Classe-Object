@@ -13,14 +13,30 @@ public class PessoaJuridica extends Cliente {
         this.numFuncionarios = numFuncionarios;
     }
 
-    @Override
-    void imprimir() {
-        System.out.println("Nome: " + getNome());
-        System.out.println("CPF: " + cnpj);
-        System.out.println("Endereço: " + getEndereco());
-        System.out.println("Data de cadastro: " + getData());
-        System.out.println("Setor: " + setor);
-        System.out.println("Numero de Funcionarios: " + numFuncionarios);
+  public String toString() {
+        String str = "<< PESSOA JURIDICA >> /n" +
+                     "Nome: " + this.getNome() + "/n" +
+                     "Data: " + this.getData() + "/n" +
+                     "Número de Funcionários: " + numFuncionarios + "/n" +
+                     "Setor: " + setor + "/n" +
+                     "Endereco: " + this.getEndereco() + "/n" +
+                     "CNPJ: " + cnpj + "/n" +
+                     "/n";
+        return str;
+    }
+
+    public boolean equals(Object obj) {
+        if(obj instanceof PessoaJuridica) {
+            PessoaJuridica objPJ = (PessoaJuridica) obj;
+
+            if(this.cnpj.equals(objPJ.cnpj)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
 
     //setters
