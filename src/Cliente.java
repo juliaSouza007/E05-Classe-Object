@@ -14,10 +14,6 @@ public abstract class Cliente {
         this.data = data;
     }
 
-    void imprimir(){
-        System.out.println("Cliente inválido :(");
-    }
-
     //getters
     public String getNome(){
         return nome;
@@ -39,5 +35,4 @@ public abstract class Cliente {
     public void setEndereco(String endereco){
         this.endereco = endereco;
     }
-
 }
