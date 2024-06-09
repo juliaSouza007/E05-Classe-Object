@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 
 public class Conta {
@@ -10,8 +9,15 @@ public class Conta {
     public static int totalContas = 0;
 
     private int contador = 0;
+    
+    private double limite;
+    
+    private int num;
 
-    public Conta (Cliente donoConta) {
+    public Conta (Cliente donoConta, double limite, double saldo, int num) {
+        this.num = num;
+        this.saldo = saldo;
+        this.limite = limite;
         this.donoConta = donoConta;
         totalContas++;
     }
@@ -47,8 +53,8 @@ public class Conta {
     }
 
      public String toString() {
-        String str = "<< Conta " + this.numero + " >>\n" +
-                      this.dono.toString() + "\n" +
+        String str = "<< Conta " + this.num + " >>\n" +
+                      this.donoConta.toString() + "\n" +
                      "Saldo: " + this.saldo + "\n" +
                      "Limite: " + this.limite + "\n" +
                      "\n";
@@ -59,7 +65,7 @@ public class Conta {
         if(obj instanceof Conta) {
             Conta objConta = (Conta) obj;
 
-            if(this.numero == objConta.numero) {
+            if(this.num == objConta.num) {
                 return true;
             } else {
                 return false;
@@ -85,6 +91,16 @@ public class Conta {
     //setters
     public void setDonoConta(Cliente donoConta) {
         this.donoConta = donoConta;
+    }
+    
+    public boolean setLimite(double limite) {
+        if (limite < 0) {
+            this.limite = 0;
+            return false;
+        } else {
+            this.limite = limite;
+            return true;
+        }
     }
 
 }
