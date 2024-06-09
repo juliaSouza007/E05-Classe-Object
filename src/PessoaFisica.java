@@ -18,7 +18,7 @@ public class PessoaFisica extends Cliente {
                      "Nome: " + this.getNome() + "\n" +
                      "CPF:" + cpf + "\n" +
                      "Idade:" + idade + "\n" +
-                     "Genero:" + genero + "\n" +
+                     "Genero:" + sexo + "\n" +
                      "Data: " + this.getData() + "\n" +
                      "Endereco: " + this.getEndereco() + "\n" +
                      "\n";
