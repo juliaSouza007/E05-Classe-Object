@@ -14,14 +14,14 @@ public class PessoaJuridica extends Cliente {
     }
 
   public String toString() {
-        String str = "<< PESSOA JURIDICA >> /n" +
-                     "Nome: " + this.getNome() + "/n" +
-                     "Data: " + this.getData() + "/n" +
-                     "Número de Funcionários: " + numFuncionarios + "/n" +
-                     "Setor: " + setor + "/n" +
-                     "Endereco: " + this.getEndereco() + "/n" +
-                     "CNPJ: " + cnpj + "/n" +
-                     "/n";
+        String str = "<< PESSOA JURIDICA >> \n" +
+                     "Nome: " + this.getNome() + "\n" +
+                     "Data: " + this.getData() + "\n" +
+                     "Número de Funcionários: " + numFuncionarios + "\n" +
+                     "Setor: " + setor + "\n" +
+                     "Endereco: " + this.getEndereco() + "\n" +
+                     "CNPJ: " + cnpj + "\n" +
+                     "\n";
         return str;
     }
 
