@@ -38,4 +38,30 @@ public class PessoaFisica extends Cliente {
             return false;
         }
     }
+
+     //setters
+    public void setCpf(String cpf){
+        this.cpf = cpf;
+    }
+
+    public void setIdade(int idade){
+        this.idade = idade;
+    }
+
+    public void setSexo(char sexo){
+        this.sexo = sexo;
+    }
+
+    //getters
+    public String getCpf(){
+        return cpf;
+    }
+
+    public int getIdade(){
+        return idade;
+    }
+
+    public char getSexo(){
+        return sexo;
+    }
 }
